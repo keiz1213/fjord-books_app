@@ -31,3 +31,18 @@
 
 en:
   hello: "Hello world"
+
+  books:
+    index:
+      title: "Books"
+    new:
+      title: "New book"
+    edit:
+      title: "Editing book"
+    create:
+      succes: "Book was successfully created."
+    update:
+      succes: "Book was successfully updated."
+    destroy:
+      succes: "Book was successfully destroyed."
+

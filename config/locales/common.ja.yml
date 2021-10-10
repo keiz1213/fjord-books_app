@@ -5,8 +5,16 @@ ja:
     show: 詳細
     destroy: 削除
     new_books: 新規登録
-
-  menu:
-    books: 本一覧
-    new_book: 新規登録
-    editing_book: 編集
+  books:
+    index:
+      title: 本一覧
+    new:
+      title: 新規登録
+    edit:
+      title: 編集
+    create:
+      succes: 投稿しました
+    update:
+      succes: 更新しました
+    destroy:
+      succes: 削除しました
