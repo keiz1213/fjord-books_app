@@ -39,10 +39,10 @@ en:
       title: "New book"
     edit:
       title: "Editing book"
-    create:
-      succes: "Book was successfully created."
-    update:
-      succes: "Book was successfully updated."
-    destroy:
-      succes: "Book was successfully destroyed."
+  create:
+    succes: "%{content} was successfully created."
+  update:
+    succes: "%{content} was successfully updated."
+  destroy:
+    succes: "%{content} was successfully destroyed."
 

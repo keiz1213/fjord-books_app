@@ -12,9 +12,9 @@ ja:
       title: 新規登録
     edit:
       title: 編集
-    create:
-      succes: 投稿しました
-    update:
-      succes: 更新しました
-    destroy:
-      succes: 削除しました
+  create:
+    succes: "%{content}を投稿しました"
+  update:
+    succes: "%{content}を更新しました"
+  destroy:
+    succes: "%{content}を削除しました"
