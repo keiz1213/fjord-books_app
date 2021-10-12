@@ -1,0 +1,20 @@
+ja:
+  button:
+    edit: 編集
+    back: 戻る
+    show: 詳細
+    destroy: 削除
+    new_books: 新規登録
+  books:
+    index:
+      title: 本一覧
+    new:
+      title: 新規登録
+    edit:
+      title: 編集
+  create:
+    succes: "%{content}を投稿しました"
+  update:
+    succes: "%{content}を更新しました"
+  destroy:
+    succes: "%{content}を削除しました"
