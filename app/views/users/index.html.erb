@@ -18,6 +18,11 @@
         <td><%= user.name %></td>
         <td><%= user.postal_code %></td>
         <td><%= user.address %></td>
+        <% if user.image.attached? %>
+          <td class = "icon">
+            <span class = "image"><%= image_tag user.image.variant(resize_to_limit: [70, 70]) %></span>
+          </td>
+        <% end %>
         <td><%= link_to t('views.common.show'), user %></td>
       </tr>
     <% end %>

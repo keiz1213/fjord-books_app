@@ -66,3 +66,20 @@ div.actions {
 
 label {
   display: block; }
+
+.icon{
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  margin-right: 10px;
+  overflow: hidden;
+  position: relative;
+  .image{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+  }
+}
