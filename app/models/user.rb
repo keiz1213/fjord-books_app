@@ -10,6 +10,6 @@ class User < ApplicationRecord
   private
 
   def image_type
-    errors.add(:image, 'はpng、jpegまたはgifでアップロードしてください') unless image.blob.content_type.in?(%('image/png image/jpeg image/gif'))
+    errors.add(:image, 'はpng、jpgまたはgifでアップロードしてください') unless image.blob.content_type.in?(%('image/png image/jpeg image/gif'))
   end
 end
