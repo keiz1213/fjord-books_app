@@ -228,10 +228,12 @@ ja:
     application:
       menu: メニュー
       sign_in_as: "%{email} としてログイン中"
+      my_report: "%{email} の日報"
   users:
     show:
       followings: "%{count} フォロー"
       followers: "%{count} フォロワー"
+      reports: "%{count} 日報"
       create: フォローする
       destroy: フォロー解除する
     followings:

@@ -26,10 +26,8 @@
         <td><%= report.created_at %></td>
         <td><%= report.updated_at %></td>
         <td><%= link_to t('views.common.show'), report %></td>
-        <% if current_user == report.user %>
-          <td><%= link_to t('views.common.edit'), edit_report_path(report) %></td>
-          <td><%= link_to t('views.common.destroy'), report, method: :delete, data: { confirm: t('views.common.delete_confirm') } %></td>
-        <% end %>
+        <td><%= link_to t('views.common.edit'), edit_report_path(report) %></td>
+        <td><%= link_to t('views.common.destroy'), report, method: :delete, data: { confirm: t('views.common.delete_confirm') } %></td>
       </tr>
     <% end %>
   </tbody>
