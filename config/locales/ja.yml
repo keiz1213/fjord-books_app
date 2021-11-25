@@ -1,5 +1,10 @@
 ---
 ja:
+  users:
+    following:
+      following: フォロー
+    followers:
+      follower: フォロワー
   activerecord:
     errors:
       messages:
