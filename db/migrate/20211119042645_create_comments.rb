@@ -1,14 +1,13 @@
 # frozen_string_literal: true
 
-class CreateReports < ActiveRecord::Migration[6.1]
+class CreateComments < ActiveRecord::Migration[6.1]
   def change
-    create_table :reports do |t|
-      t.text :title
+    create_table :comments do |t|
       t.text :content
+      t.references :commentable, polymorphic: true, null: false
       t.references :user, null: false, foreign_key: true
 
       t.timestamps
     end
-    add_index :reports, %i[user_id created_at]
   end
 end

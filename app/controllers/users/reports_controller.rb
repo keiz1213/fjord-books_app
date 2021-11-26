@@ -5,5 +5,4 @@ class Users::ReportsController < ApplicationController
     @user = User.find(params[:user_id])
     @reports = @user.reports.order(id: :desc).page(params[:page])
   end
-
 end

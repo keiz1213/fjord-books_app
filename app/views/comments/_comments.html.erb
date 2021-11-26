@@ -1,0 +1,42 @@
+<% if commentable.comments.present? %>
+  <table>
+    <thead>
+    <tr>
+      <th></th>
+      <th><%= Comment.human_attribute_name(:title) %></th>
+      <th><%= User.human_attribute_name(:name) %></th>
+      <th><%= Comment.human_attribute_name(:created_at) %></th>
+      <th><%= Comment.human_attribute_name(:updated_at) %></th>
+      <th></th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <% commentable.comments.each do |comment| %>
+      <tr>
+        <th>
+          <% if comment.user.avatar.attached? %>
+            <%= image_tag comment.user.avatar.variant(resize_to_fill: [30, 30])%>
+          <% end %>
+        </th>
+        <td><%= comment.content %></td>
+        <td>
+          <% if comment.user.name.empty? %>
+            <%= comment.user.email %>
+          <% else %>
+            <%= comment.user.name %>
+          <% end %>
+        </td>
+        <td><%= comment.created_at.to_s(:datetime_jp) %></td>
+        <td><%= comment.updated_at.to_s(:datetime_jp) %></td>
+        <% if current_user == comment.user %>
+          <td><%= link_to t('views.common.edit'), edit_comment_path(comment) %></td>
+          <td><%= link_to t('views.common.destroy'), comment_path(comment), method: :delete, data: { confirm: t('views.common.delete_confirm') } %></td>
+        <% end %>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+<% else %>
+  <p>コメントがありません。</p>
+<% end %>
