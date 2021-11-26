@@ -1,5 +1,5 @@
 <%= form_with(model: commentable, local: true) do |f| %>  
-  <%= f.text_area :content %>  
+  <%= f.text_area :content, required: true %>  
   <div class="actions">  
     <%= f.submit "コメントをする", class: 'btn btn-warning px-5' %>  
   </div>  
