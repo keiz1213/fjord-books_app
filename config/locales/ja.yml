@@ -145,6 +145,8 @@ ja:
       create: 登録する
       submit: 保存する
       update: 更新する
+      comment:
+        create: コメントする
   number:
     currency:
       format:
@@ -242,6 +244,9 @@ ja:
     followers:
       index:
         title: フォロワー
+  comments:
+    comments:
+      no_comments: コメントがありません
   controllers:
     common:
       notice_create: "%{name}が作成されました。"

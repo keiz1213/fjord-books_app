@@ -27,7 +27,7 @@
 <%= form_with model: [@book, Comment.new] do |f| %>  
   <%= f.text_area :content, required: true %>  
   <div class="actions">  
-    <%= f.submit "コメントをする", class: 'btn btn-warning px-5' %>  
+    <%= f.submit %>  
   </div>  
 <% end %>
 

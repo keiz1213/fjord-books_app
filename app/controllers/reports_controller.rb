@@ -12,7 +12,7 @@ class ReportsController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
+    @user = @report.user
   end
 
   def edit; end

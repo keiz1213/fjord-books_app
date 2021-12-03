@@ -5,14 +5,14 @@ class CommentsController < ApplicationController
 
   def create
     @comment = @commentable.comments.build(comment_params)
-    @comment.save
+    @comment.save!
     redirect_to @commentable, notice: t('controllers.common.notice_create', name: Comment.model_name.human)
   end
 
   def edit; end
 
   def update
-    @comment.update(comment_params)
+    @comment.update!(comment_params)
     redirect_to @commentable_type, notice: t('controllers.common.notice_update', name: Comment.model_name.human)
   end
 
