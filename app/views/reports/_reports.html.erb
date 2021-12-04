@@ -27,8 +27,8 @@
             <%= report.user.name %>
           <% end %>
         </td>
-        <td><%= report.created_at.to_s(:datetime_jp) %></td>
-        <td><%= report.updated_at.to_s(:datetime_jp) %></td>
+        <td><%= l report.created_at, format: :short %></td>
+        <td><%= l report.updated_at, format: :short %></td>
         <td><%= link_to t('views.common.show'), report %></td>
         <% if current_user == report.user %>
           <td><%= link_to t('views.common.edit'), edit_report_path(report) %></td>
