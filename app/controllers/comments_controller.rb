@@ -13,7 +13,7 @@ class CommentsController < ApplicationController
 
   def update
     @comment.update!(comment_params)
-    redirect_to @commentable_type, notice: t('controllers.common.notice_update', name: Comment.model_name.human)
+    redirect_to @commentable, notice: t('controllers.common.notice_update', name: Comment.model_name.human)
   end
 
   def destroy

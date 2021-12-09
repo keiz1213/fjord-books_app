@@ -1,4 +1,4 @@
-<%= form_with(model: commentable, local: true) do |f| %>  
+<%= form_with model: [@commentable_type, @comment] do |f| %>  
   <%= f.text_area :content, required: true %>  
   <div class="actions">  
     <%= f.submit %>  
