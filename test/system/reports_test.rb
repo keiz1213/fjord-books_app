@@ -14,6 +14,7 @@ class ReportsTest < ApplicationSystemTestCase
   test 'visiting the index' do
     visit reports_url
     assert_selector 'h1', text: '日報'
+    assert_selector 'tr', text: 'こんにちは'
   end
 
   test 'creating a report' do
@@ -46,7 +47,7 @@ class ReportsTest < ApplicationSystemTestCase
 
   test 'destroying a report' do
     visit reports_url
-    page.accept_confirm do
+    accept_confirm do
       click_on '削除'
     end
 
